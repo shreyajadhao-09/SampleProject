@@ -1,6 +1,7 @@
 <% layout("/layouts/boilerplate.ejs") %>
     <div class="row mt-3">
         <div class="alert alert-danger col-6 offset-3" role="alert">
-            <h4 class="alert-heading"><%= err.message %></h4>
+            <h4 class="alert-heading"><%= err.statusCode %> - <%= err.message %></h4>
+            <a href="/listings" class="btn btn-outline-danger mt-2">Back to listings</a>
         </div>
     </div>

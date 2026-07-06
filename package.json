@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "check": "node --check app.js && node --check schema.js && node --check models/listing.js && node --check models/review.js && node --check utils/ExpressError.js && node --check utils/wrapAsync.js && node --check init/index.js",
+    "test": "npm run check"
   },
   "keywords": [],
   "author": "",
