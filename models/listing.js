@@ -6,7 +6,10 @@ const listingSchema = new Schema({
     type: String,
     required: true,
   },
-  description: String,
+  description: {
+    type: String,
+    required: true,
+  },
   image: {
     type: String,
     default:
@@ -18,9 +21,19 @@ const listingSchema = new Schema({
       return v;
     },
   },
-  price: Number,
-  location: String,
-  country: String,
+  price: {
+    type: Number,
+    min: 0,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  country: {
+    type: String,
+    required: true,
+  },
   reviews: [
     {
       type: Schema.Types.ObjectId,
